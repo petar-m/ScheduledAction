@@ -15,7 +15,7 @@
     <PackageLicenseUrl>https://github.com/petar-m/ScheduledAction/blob/master/LICENSE</PackageLicenseUrl>
     <AssemblyName>M.ScheduledAction</AssemblyName>
     <RootNamespace>M.ScheduledAction</RootNamespace>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <NetStandardImplicitPackageVersion Condition=" '$(TargetFramework)' == 'netstandard1.2' ">1.6.1</NetStandardImplicitPackageVersion>
   </PropertyGroup>
 
