@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.2;net45</TargetFrameworks>
+    <TargetFrameworks>net45;netstandard1.2</TargetFrameworks>
     <Authors>Petar Marinov</Authors>
     <Company />
     <Description>A wrapper around System.Threading.Timer for scheduling an action execution.</Description>
@@ -16,6 +16,7 @@
     <AssemblyName>M.ScheduledAction</AssemblyName>
     <RootNamespace>M.ScheduledAction</RootNamespace>
     <Version>1.0.0</Version>
+    <NetStandardImplicitPackageVersion Condition=" '$(TargetFramework)' == 'netstandard1.2' ">1.6.1</NetStandardImplicitPackageVersion>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -37,9 +38,10 @@
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net45|AnyCPU'">
     <DocumentationFile>bin\Release\net45\M.ScheduledAction.xml</DocumentationFile>
   </PropertyGroup>
-  
-  <ItemGroup>
-    <PackageReference Include="NETStandard.Library" Version="1.6.1" />
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   
 </Project>
