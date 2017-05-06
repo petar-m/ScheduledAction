@@ -18,7 +18,7 @@ A wrapper around System.Threading.Timer for scheduling an action execution.
         AfterFailureSchedule = new Fixed(TimeSpan.FromMinutes(15))
     };
 
-    Action action1 = () => { /* do something */ };
+    Action action = () => { /* do something */ };
 
     IScheduledAction scheduledAction = new ScheduledAction(action, schedule, options);
 
