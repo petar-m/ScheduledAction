@@ -94,8 +94,8 @@ namespace M.ScheduledAction
 
         private void Reschedule(ISchedule activeSchedule)
         {
-            TimeSpan nextRunAt = activeSchedule.NextEventAfter();
-            Reschedule(nextRunAt);
+            TimeSpan executeAfter = activeSchedule.NextEventAfter();
+            Reschedule(executeAfter);
         }
 
         private void Reschedule(TimeSpan executeAfter)
@@ -107,8 +107,6 @@ namespace M.ScheduledAction
             }
 
             timer.Change(executeAfter, TimeSpan.FromMilliseconds(-1));
-
-            DateTime nextRunAt = DateTime.Now.Add(executeAfter);
             options.InvokeOnReschedule(this, executeAfter);
         }
     }
