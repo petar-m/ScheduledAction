@@ -14,9 +14,9 @@ namespace M.ScheduledAction.Schedules
         }
 
         /// <summary>
-        /// Gets an instance of SystemDateTime.
+        /// Gets an instance of System.DateTime.
         /// </summary>
-        /// <returns>Returns an instance of SystemDateTime</returns>
+        /// <returns>Returns an instance of System.DateTime</returns>
         public static IDateTime Get()
         {
             return systemTime;

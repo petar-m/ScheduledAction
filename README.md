@@ -33,6 +33,8 @@ Current implementations:
 `Daily` - single event per day at given time.  
 `RecurringSince` - recurring at given time interval since point in time.  
 `Fixed` - every time returns fixed time interval.  
+
+The action is executed on ThreadPool thread.  
   
 **Note:** Rescheduling is done after the action is executed.  
 This means that `Fixed` schedule can 'slide' in time with the action execution times.  
